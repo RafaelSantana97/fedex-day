@@ -27,8 +27,12 @@ namespace Platformer.Mechanics
         /// </summary>
         public void Increment()
         {
-            currentHP = Mathf.Clamp(currentHP + 1, 0, maxHP);
-            FindObjectOfType<HealthController>().DisplayHeart(currentHP, true);
+            if (currentHP < this.maxHP)
+            {
+                currentHP = Mathf.Clamp(currentHP + 1, 0, maxHP);
+                FindObjectOfType<HealthController>().DisplayHeart(currentHP, true);
+                Debug.Log($"Incementes {currentHP}");
+            }
         }
 
         /// <summary>
@@ -57,6 +61,7 @@ namespace Platformer.Mechanics
         void Awake()
         {
             currentHP = maxHP;
+            Decrement();
         }
     }
 }

@@ -5,7 +5,7 @@ using static Platformer.Core.Simulation;
 
 namespace Platformer.Mechanics
 {
-    /// <summary>
+        /// <summary>
     /// This class contains the data required for implementing token collection mechanics.
     /// It does not perform animation of the token, this is handled in a batch by the 
     /// TokenController in the scene.
@@ -13,6 +13,11 @@ namespace Platformer.Mechanics
     [RequireComponent(typeof(Collider2D))]
     public class TokenInstance : MonoBehaviour
     {
+
+
+        [SerializeField]
+        public bool isCoin = false;
+
         public AudioClip tokenCollectAudio;
         [Tooltip("If true, animation will start at a random position in the sequence.")]
         public bool randomAnimationStartTime = false;
