@@ -249,10 +249,17 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.Compression.FileSystem">
+<<<<<<< HEAD
  <HintPath>C:/Users/Rafael Santana/Downloads/Game Tutorial/Tutorial/Library/PackageCache/com.unity.connect.share@1.2.0-preview.1/Plugins/System.IO.Compression.FileSystem.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/Rafael Santana/Downloads/Game Tutorial/Tutorial/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+=======
+ <HintPath>C:/workspaceFedex/fedex-day/Tutorial/Library/PackageCache/com.unity.connect.share@1.2.0-preview.1/Plugins/System.IO.Compression.FileSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/workspaceFedex/fedex-day/Tutorial/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+>>>>>>> f56ca8bb7eba43fa7859c2f1cac54cbde46d3744
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
