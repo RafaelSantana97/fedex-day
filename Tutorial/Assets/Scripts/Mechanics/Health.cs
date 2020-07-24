@@ -26,7 +26,10 @@ namespace Platformer.Mechanics
         public int currentHP { private set; get; }
 
 
-        public void AddCoin(int coinsToAdd) => this.Coins += coinsToAdd;
+        public void AddCoin(int coinsToAdd) {
+            this.Coins += coinsToAdd;
+            FindObjectOfType<CoinController>().UpdateCoins(this.Coins);
+        }
 
         public void LostAllCoins() => this.Coins = 0;
 
