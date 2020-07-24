@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 3878432922339819691, guid: 950603be0285f024f95c141c71a2ba00,
         type: 3}
       propertyPath: m_Name
-      value: CoinAbacaxi
+      value: CoinAbacaxi Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878432922339819732, guid: 950603be0285f024f95c141c71a2ba00,
+        type: 3}
+      propertyPath: collectedAnimation.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3878432922339819732, guid: 950603be0285f024f95c141c71a2ba00,
         type: 3}
