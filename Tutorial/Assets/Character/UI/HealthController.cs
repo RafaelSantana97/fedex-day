@@ -6,11 +6,6 @@ public class HealthController : MonoBehaviour
 {
     [SerializeField] GameObject[] hearts;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void DisplayHeart(int health, bool increase) {
 
