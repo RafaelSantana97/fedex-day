@@ -1,4 +1,6 @@
+using Platformer.Gameplay;
 using UnityEngine;
+using static Platformer.Core.Simulation;
 
 namespace Platformer.Mechanics
 {
@@ -49,17 +51,14 @@ namespace Platformer.Mechanics
                     var token = tokens[i];
                     //if token is null, it has been disabled and is no longer animated.
                     if (token != null)
-                    {
-                        token._renderer.sprite = token.sprites[token.frame];
-                        if (token.collected && token.frame == token.sprites.Length - 1)
+                    {                        
+                        if (token.collected)
                         {
+                            Schedule<PlayerHealthIncrement>();
                             token.gameObject.SetActive(false);
-                            tokens[i] = null;
-                        }
-                        else
-                        {
-                            token.frame = (token.frame + 1) % token.sprites.Length;
-                        }
+                            tokens[i] = null;                            
+                            Debug.Log("Testing");
+                        }                       
                     }
                 }
                 //calculate the time of the next frame.
