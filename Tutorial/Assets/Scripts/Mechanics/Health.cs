@@ -28,6 +28,7 @@ namespace Platformer.Mechanics
         public void Increment()
         {
             currentHP = Mathf.Clamp(currentHP + 1, 0, maxHP);
+            FindObjectOfType<HealthController>().DisplayHeart(currentHP, true);
         }
 
         /// <summary>
@@ -37,6 +38,7 @@ namespace Platformer.Mechanics
         public void Decrement()
         {
             currentHP = Mathf.Clamp(currentHP - 1, 0, maxHP);
+            FindObjectOfType<HealthController>().DisplayHeart(currentHP, false);
             if (currentHP == 0)
             {
                 var ev = Schedule<HealthIsZero>();
