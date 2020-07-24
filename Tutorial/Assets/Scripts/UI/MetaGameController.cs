@@ -66,7 +66,7 @@ namespace Platformer.UI
         {
             if (Input.GetButtonDown("Menu"))
             {
-                ToggleMainMenu(show: !showMainCanvas);
+                ToggleMainMenu(show: !showMainCanvas); 
             }
         }
 
