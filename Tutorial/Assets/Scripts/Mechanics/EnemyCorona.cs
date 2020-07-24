@@ -8,7 +8,7 @@ namespace Platformer.Mechanics
 {
 
     [RequireComponent(typeof(Collider2D))]
-    public class EnemyCorona : MonoBehaviour
+    public class EnemyCorona : MonoBehaviour 
     {
 
         [SerializeField] private float timeBeforeDisapear = 3f;
