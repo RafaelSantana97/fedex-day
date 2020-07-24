@@ -2,6 +2,7 @@ using System;
 using Platformer.Gameplay;
 using UnityEngine;
 using static Platformer.Core.Simulation;
+using UnityEngine.SceneManagement;
 
 namespace Platformer.Mechanics
 {
@@ -67,6 +68,7 @@ namespace Platformer.Mechanics
         public void Die()
         {
             while (currentHP > 0) Decrement();
+            SceneManager.LoadScene(0);
         }
 
         void Awake()
