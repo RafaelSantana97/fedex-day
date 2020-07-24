@@ -59,7 +59,7 @@ namespace Platformer.Mechanics
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
                 else if (Input.GetButtonUp("Jump"))
-                {
+                { 
                     stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
                 }
