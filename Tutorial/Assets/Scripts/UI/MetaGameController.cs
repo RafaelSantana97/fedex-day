@@ -38,9 +38,10 @@ namespace Platformer.UI
         /// <param name="show"></param>
         public void ToggleMainMenu(bool show)
         {
+
             if (this.showMainCanvas != show)
             {
-                _ToggleMainMenu(show);
+                Application.Quit();
             }
         }
 
@@ -65,7 +66,7 @@ namespace Platformer.UI
         {
             if (Input.GetButtonDown("Menu"))
             {
-                ToggleMainMenu(show: !showMainCanvas);
+                ToggleMainMenu(show: !showMainCanvas); 
             }
         }
 
