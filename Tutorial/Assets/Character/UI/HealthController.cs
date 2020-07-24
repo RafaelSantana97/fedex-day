@@ -9,17 +9,19 @@ public class HealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void DisplayHeart(int health, bool increase) {
+    public void DisplayHeart(int health, bool increase)
+    {
 
-        if (increase) {
-            if (health != 3) {
-                hearts[health].SetActive(true);
-                hearts[health - 1].SetActive(false);
-            }
-        } else {
+        if (increase)
+        {
+            hearts[health].SetActive(true);
+            hearts[health - 1].SetActive(false);
+        }
+        else
+        {
             hearts[health + 1].SetActive(false);
             hearts[health].SetActive(true);
         }
