@@ -41,7 +41,7 @@ namespace Platformer.Mechanics
         }
 
         void Update()
-        {
+        {            
             //if it's time for the next frame...
             if (Time.time - nextFrameTime > (1f / frameRate))
             {
@@ -54,10 +54,15 @@ namespace Platformer.Mechanics
                     {
                         if (token.collected)
                         {
-                            Schedule<PlayerHealthIncrement>();
+                            if (token.isCoin)
+                            {
+                                Schedule<PlayerHealthAddCoin>();
+                            } else
+                            {
+                                Schedule<PlayerHealthIncrement>();
+                            }
                             token.gameObject.SetActive(false);
-                            tokens[i] = null;
-                            Debug.Log("Testing");
+                            tokens[i] = null;                            
                         }
                     }
                 }

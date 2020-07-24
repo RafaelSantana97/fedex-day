@@ -10,6 +10,9 @@ namespace Platformer.Mechanics
     /// </summary>
     public class Health : MonoBehaviour
     {
+
+        public int Coins { get; set; }
+
         /// <summary>
         /// The maximum hit points for the entity.
         /// </summary>
@@ -22,6 +25,15 @@ namespace Platformer.Mechanics
 
         public int currentHP { private set; get; }
 
+
+        public void AddCoin(int coinsToAdd) => this.Coins += coinsToAdd;
+
+        public void LostAllCoins() => this.Coins = 0;
+
+        public void LostCoins(int coinsToLost) => this.Coins = (this.Coins - coinsToLost) >= 0 ? (this.Coins - coinsToLost) : 0;
+
+
+
         /// <summary>
         /// Increment the HP of the entity.
         /// </summary>
@@ -31,7 +43,6 @@ namespace Platformer.Mechanics
             {
                 currentHP = Mathf.Clamp(currentHP + 1, 0, maxHP);
                 FindObjectOfType<HealthController>().DisplayHeart(currentHP, true);
-                Debug.Log($"Incementes {currentHP}");
             }
         }
 
@@ -61,7 +72,7 @@ namespace Platformer.Mechanics
         void Awake()
         {
             currentHP = maxHP;
-            Decrement();
+            this.LostAllCoins();
         }
     }
 }
