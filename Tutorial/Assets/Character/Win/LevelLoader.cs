@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
 
-    public void GoWinScreen() 
+    public void Restart() 
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 
-    public void GoDefeatScreen() {
-        SceneManager.LoadScene(3);
+    public void Exit() {
+        Application.Quit();
     }
 }

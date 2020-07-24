@@ -17,7 +17,7 @@ namespace Platformer.Mechanics
             var player = other.gameObject.GetComponent<PlayerController>();
             if (player != null)
             {
-                Schedule<PlayerHealthDecrease>();
+                Schedule<PlayerHealthDecrease>(); 
             }
         }
     }
