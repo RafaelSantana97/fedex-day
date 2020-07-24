@@ -123170,10 +123170,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawReady: 1
-  respawCooldown: 3.5
+  respawCooldownMin: 2
+  respawCooldownMax: 4
   enemies:
-  - {fileID: 2493622387133895699, guid: 98f914d4c6bf6c449bab97bbdce1ab48, type: 3}
-  - {fileID: 2054201895070415318, guid: f8f1588858939a64685b2f138374ac1c, type: 3}
+  - {fileID: 1201310708234310408, guid: 98f914d4c6bf6c449bab97bbdce1ab48, type: 3}
+  - {fileID: 8966445168062068438, guid: f8f1588858939a64685b2f138374ac1c, type: 3}
 --- !u!1 &1377441406
 GameObject:
   m_ObjectHideFlags: 0
@@ -124385,7 +124386,7 @@ GameObject:
   - component: {fileID: 1959692933}
   - component: {fileID: 1959692932}
   m_Layer: 0
-  m_Name: Obstable
+  m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

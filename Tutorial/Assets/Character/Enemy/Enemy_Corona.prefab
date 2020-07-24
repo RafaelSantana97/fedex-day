@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 705587031720287681}
   - component: {fileID: 705587031720287680}
   - component: {fileID: 705587031720287693}
-  - component: {fileID: 2493622387133895699}
+  - component: {fileID: 1201310708234310408}
   m_Layer: 0
   m_Name: Enemy_Corona
   m_TagString: Untagged
@@ -281,7 +281,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2493622387133895699
+--- !u!114 &1201310708234310408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,10 +290,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 705587031720287685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20ba56d1d0cfe4e4faa5304b04c35f5e, type: 3}
+  m_Script: {fileID: 11500000, guid: efcc4566ad2105d4e8556431cf365e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeDisapear: 4
+  timeBeforeDisapearMin: 3.5
+  timeBeforeDisapearMax: 4
 --- !u!50 &1874461587153564712
 Rigidbody2D:
   serializedVersion: 4
@@ -331,6 +332,20 @@ CapsuleCollider2D:
   m_Offset: {x: -0.027002633, y: 0.4407941}
   m_Size: {x: 0.428398, y: 0.80639625}
   m_Direction: 0
+--- !u!114 &424046966764779206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692360649721702487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efcc4566ad2105d4e8556431cf365e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBeforeDisapearMin: 2
+  timeBeforeDisapearMax: 3.5
 --- !u!114 &7510280867933886934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ba56d1d0cfe4e4faa5304b04c35f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeDisapear: 5
 --- !u!1001 &705587032537624528
 PrefabInstance:
   m_ObjectHideFlags: 0

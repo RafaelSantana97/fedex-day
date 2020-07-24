@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour {
 
     [SerializeField] bool respawReady = true;
-    [SerializeField] float respawCooldown = 4.5f;
-    [SerializeField] Platformer.Mechanics.EnemyCorona[] enemies;
+    [SerializeField] float respawCooldownMin = 4.5f;
+    [SerializeField] float respawCooldownMax = 6.0f;
+
+    [SerializeField] Platformer.Mechanics.EnemyCoronaDespawn[] enemies;
 
     private void Start() {
     }
@@ -30,8 +32,8 @@ public class EnemySpawner : MonoBehaviour {
             enemyRespawn.x -= 2.9f;
         }
 
-        Platformer.Mechanics.EnemyCorona enemy = Instantiate(enemies[Random.Range(0, enemies.Length)], enemyRespawn, transform.rotation);
-        yield return new WaitForSeconds(respawCooldown);
+        Platformer.Mechanics.EnemyCoronaDespawn enemy = Instantiate(enemies[Random.Range(0, enemies.Length)], enemyRespawn, transform.rotation);
+        yield return new WaitForSeconds(Random.Range(respawCooldownMin, respawCooldownMax));
         respawReady = true;
     }
 }
