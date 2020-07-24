@@ -56,7 +56,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Character\Enemy\EnemyCorona.cs" />
     <Compile Include="Assets\Character\UI\HealthController.cs" />
     <Compile Include="Assets\Character\Win\LevelLoader.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Backend\TemplateEditorDetection.cs" />
@@ -78,6 +77,7 @@
     <Compile Include="Assets\Scripts\Gameplay\PlayerEnteredDeathZone.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerEnteredVictoryZone.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerHealthDecrease.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\PlayerHealthAddCoin.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerHealthIncrement.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerJumped.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerLanded.cs" />
@@ -85,8 +85,10 @@
     <Compile Include="Assets\Scripts\Gameplay\PlayerStopJump.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerTokenCollision.cs" />
     <Compile Include="Assets\Scripts\Mechanics\AnimationController.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\BubbleController.cs" />
     <Compile Include="Assets\Scripts\Mechanics\DeathZone.cs" />
     <Compile Include="Assets\Scripts\Mechanics\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\EnemyCorona.cs" />
     <Compile Include="Assets\Scripts\Mechanics\GameController.cs" />
     <Compile Include="Assets\Scripts\Mechanics\Health.cs" />
     <Compile Include="Assets\Scripts\Mechanics\KinematicObject.cs" />
