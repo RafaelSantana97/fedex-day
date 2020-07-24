@@ -20,8 +20,7 @@ namespace Platformer.Gameplay
             var player = model.player;
             var playerHealt = player.health;
             player.animator.SetTrigger("hurt");
-            playerHealt.Decrement();
-            Debug.Log($"Player lives {player.health.currentHP}");
+            playerHealt.Decrement();            
             if (!playerHealt.IsAlive)
             {
                 Schedule<PlayerDeath>();
